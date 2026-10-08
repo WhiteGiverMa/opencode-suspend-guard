@@ -1,0 +1,39 @@
+{
+  "name": "opencode-suspend-guard",
+  "version": "0.1.0",
+  "description": "Confirm Ctrl+Z before suspending the OpenCode TUI",
+  "type": "module",
+  "license": "MIT",
+  "author": "WhiteGiverMa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WhiteGiverMa/opencode-suspend-guard.git"
+  },
+  "homepage": "https://github.com/WhiteGiverMa/opencode-suspend-guard#readme",
+  "bugs": "https://github.com/WhiteGiverMa/opencode-suspend-guard/issues",
+  "exports": {
+    "./tui": "./dist/tui.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "tui.js", "README.md", "LICENSE"],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "build": "bun run scripts/build.ts"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": ">=2.0.24 <3",
+    "@opentui/core": ">=0.5.14",
+    "@opentui/solid": ">=0.5.14",
+    "solid-js": ">=1.9.15"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.0.24",
+    "@opentui/core": "0.5.14",
+    "@opentui/solid": "0.5.14",
+    "@types/bun": "1.3.14",
+    "@types/node": "24.13.6",
+    "solid-js": "1.9.15",
+    "typescript": "5.9.3"
+  }
+}
