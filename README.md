@@ -39,30 +39,6 @@ bun run build
 
 只守卫 `ctrl+z`，不改变其他快捷键。第二次调用宿主的 `terminal.suspend`，不会自行发送信号或修改终端设置。终端报告的自动重复按键会被忽略；旧式终端若不报告按键重复，无法区分按住连发与再次按下。`opencode mini` 不在支持范围内。
 
-## o3p 命名
-
-o3p 新插件采用 `o3p.<domain>.<feature>` 作为运行时 ID：小写、点分层，功能名内的多词用连字符。`domain` 表示功能领域，不按 server/TUI 实现拆分。包名和仓库名仍采用 `opencode-<feature>`。
-
-| 标识 | 本插件 |
-| --- | --- |
-| npm 包 / 仓库 | `opencode-suspend-guard` |
-| 运行时插件 ID | `o3p.terminal.suspend-guard` |
-| TUI 命令 ID | `o3p.terminal.suspend-guard.confirm` |
-
-插件 ID 由插件声明，不由包名自动生成。命令 ID 是独立标识；o3p 自有命令约定以前述插件 ID 为前缀，避免冲突。`opencode.*` 留给宿主内置插件，不作为 o3p 的命名空间。
-
-配置仍以包名或目录加载，再按 ID 控制开关。例如禁用已加载的所有 o3p TUI 插件：
-
-```json
-{
-  "plugins": ["/absolute/path/opencode-suspend-guard", "-o3p.*"]
-}
-```
-
-只禁用本插件可用 `-o3p.terminal.suspend-guard`；`-o3p.terminal.*` 按领域禁用。配置按顺序处理，通配选择器不会安装插件，TUI 与服务端配置分别生效。
-
-发布后保持 ID 稳定：改名会影响用户的 ID 开关和宿主插件存储命名空间。已有 o3p 插件另行迁移，不连带改包名、CLI/MCP 名称或日志标记。
-
 ## 开发
 
 ```sh
