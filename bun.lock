@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "opencode-suspend-guard",
+      "name": "opencode-terminal-guard",
       "devDependencies": {
         "@opencode/plugin": "2.0.24",
         "@opentui/core": "0.5.14",

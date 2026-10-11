@@ -1,16 +1,16 @@
 {
-  "name": "opencode-suspend-guard",
-  "version": "0.1.0",
-  "description": "Confirm Ctrl+Z before suspending the OpenCode TUI",
+  "name": "opencode-terminal-guard",
+  "version": "0.2.0",
+  "description": "Confirm Ctrl+C before exiting and Ctrl+Z before suspending the OpenCode TUI",
   "type": "module",
   "license": "MIT",
   "author": "WhiteGiverMa",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WhiteGiverMa/opencode-suspend-guard.git"
+    "url": "https://github.com/WhiteGiverMa/opencode-terminal-guard.git"
   },
-  "homepage": "https://github.com/WhiteGiverMa/opencode-suspend-guard#readme",
-  "bugs": "https://github.com/WhiteGiverMa/opencode-suspend-guard/issues",
+  "homepage": "https://github.com/WhiteGiverMa/opencode-terminal-guard#readme",
+  "bugs": "https://github.com/WhiteGiverMa/opencode-terminal-guard/issues",
   "exports": {
     "./tui": "./dist/tui.js",
     "./package.json": "./package.json"
